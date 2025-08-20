@@ -66,6 +66,12 @@ document.addEventListener('keydown', (e) => {
 menuBtn?.addEventListener('click', () => {
   mobileMenu.classList.toggle('hidden');
 });
+$$('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
+});
+
 const models = [
   {
     id: 1,
